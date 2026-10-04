@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Software Development App</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_spotify">Spotify</string>
+    <string name="title_activity_card">CardActivity</string>
+    <string name="title_activity_login_activityy">LoginActivityy</string>
+</resources>
