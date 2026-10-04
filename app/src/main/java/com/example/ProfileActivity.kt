@@ -15,8 +15,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -66,27 +64,27 @@ fun ProfileBody() {
                 .fillMaxWidth()
                 .padding(8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         ) {
 
             Icon(
                 painter = painterResource(R.drawable.outline_arrow_back_ios_24),
                 contentDescription = null,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(20.dp),
             )
 
             Text(
                 "aryanshth",
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
-                )
+                    fontSize = 20.sp,
+                ),
             )
 
             Icon(
                 painter = painterResource(R.drawable.baseline_more_horiz_24),
                 contentDescription = null,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(20.dp),
             )
         }
 
@@ -96,7 +94,7 @@ fun ProfileBody() {
                 .fillMaxWidth()
                 .padding(12.dp),
             horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         ) {
 
             Image(
@@ -110,58 +108,58 @@ fun ProfileBody() {
                             colors = listOf(
                                 Color.Red,
                                 Color.Magenta,
-                                Color.Yellow
-                            )
+                                Color.Yellow,
+                            ),
                         ),
-                        shape = CircleShape
+                        shape = CircleShape,
                     )
                     .padding(4.dp)
                     .clip(CircleShape),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Crop,
             )
 
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
                     "6",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
+                    fontSize = 20.sp,
                 )
 
                 Text(
                     "Posts",
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
                 )
             }
 
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
                     "200",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
+                    fontSize = 20.sp,
                 )
 
                 Text(
                     "Followers",
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
                 )
             }
 
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
                     "100",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
+                    fontSize = 20.sp,
                 )
 
                 Text(
                     "Following",
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
                 )
             }
         }
@@ -170,7 +168,7 @@ fun ProfileBody() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 12.dp)
+                .padding(horizontal = 12.dp),
         ) {
 
             Text(
@@ -178,34 +176,34 @@ fun ProfileBody() {
                 modifier = Modifier.padding(top = 12.dp),
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
-                    fontSize = 18.sp
-                )
+                    fontSize = 18.sp,
+                ),
             )
 
             Text(
                 text = buildAnnotatedString {
 
                     append(
-                        "Software Engineer\n"
+                        "Software Engineer\n",
                     )
 
                     withStyle(
                         style = SpanStyle(
-                            color = Color.Blue
-                        )
+                            color = Color.Blue,
+                        ),
                     ) {
                         append("#hastag\n")
                     }
 
                     withStyle(
                         style = SpanStyle(
-                            color = Color.Blue
-                        )
+                            color = Color.Blue,
+                        ),
                     ) {
                         append("Link goes here")
                     }
                 },
-                fontSize = 16.sp
+                fontSize = 16.sp,
             )
         }
 
@@ -213,28 +211,28 @@ fun ProfileBody() {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 12.dp)
+                .padding(horizontal = 12.dp),
         ) {
 
             Text("Followed by ")
 
             Text(
                 "username",
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
             )
 
             Text(" and ")
 
             Text(
                 "username",
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
             )
         }
-        Row() {
+        Row {
             ElevatedButton(
                 modifier = Modifier.weight(1f),
-                onClick = {}
-            ){
+                onClick = {},
+            ) {
                 Text("Button")
             }
         }
@@ -244,25 +242,25 @@ fun ProfileBody() {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             ElevatedButton(
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {},
             ) {
                 Text("Follow")
             }
 
             ElevatedButton(
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {},
             ) {
                 Text("Message")
             }
             ElevatedButton(
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {},
             ) {
                 Text("Email")
             }
@@ -270,24 +268,21 @@ fun ProfileBody() {
             Icon(
                 painter = painterResource(R.drawable.baseline_keyboard_arrow_down_24),
                 contentDescription = null,
-                modifier = Modifier.size(20.dp)
-
+                modifier = Modifier.size(20.dp),
             )
         }
-
-
 
         // Story Highlights
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 12.dp),
-            horizontalArrangement = Arrangement.SpaceEvenly
+            horizontalArrangement = Arrangement.SpaceEvenly,
         ) {
 
             // Story 1
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
 
                 Image(
@@ -296,7 +291,7 @@ fun ProfileBody() {
                     modifier = Modifier
                         .size(65.dp)
                         .clip(CircleShape),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
 
                 Text(".")
@@ -304,7 +299,7 @@ fun ProfileBody() {
 
             // Story 2
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
 
                 Image(
@@ -313,7 +308,7 @@ fun ProfileBody() {
                     modifier = Modifier
                         .size(65.dp)
                         .clip(CircleShape),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
 
                 Text(".")
@@ -321,7 +316,7 @@ fun ProfileBody() {
 
             // Story 3
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
 
                 Image(
@@ -330,7 +325,7 @@ fun ProfileBody() {
                     modifier = Modifier
                         .size(65.dp)
                         .clip(CircleShape),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
 
                 Text(".")
@@ -338,7 +333,7 @@ fun ProfileBody() {
 
             // Story 4
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
 
                 Image(
@@ -347,7 +342,7 @@ fun ProfileBody() {
                     modifier = Modifier
                         .size(65.dp)
                         .clip(CircleShape),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
 
                 Text(".")
@@ -355,7 +350,7 @@ fun ProfileBody() {
 
             // Story 5
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
 
                 Image(
@@ -364,13 +359,10 @@ fun ProfileBody() {
                     modifier = Modifier
                         .size(65.dp)
                         .clip(CircleShape),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
 
                 Text(".")
-
-
-
             }
         }
     }

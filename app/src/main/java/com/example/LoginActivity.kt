@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -23,6 +24,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -70,9 +73,9 @@ fun LoginBody() {
             .navigationBarsPadding()
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
     ) {
-        // Title
+        Spacer(modifier = Modifier.heightIn(min = 40.dp))
+
         Text(
             text = "Sign In",
             fontSize = 28.sp,
@@ -82,7 +85,6 @@ fun LoginBody() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Subtitle
         Text(
             text = "It was popularised in the 1960s with the release of\nLetraset sheets containing Lorem Ipsum.",
             fontSize = 12.sp,
@@ -92,72 +94,89 @@ fun LoginBody() {
 
         Spacer(modifier = Modifier.height(28.dp))
 
-        // Social Buttons Row
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            // Facebook Button
-            Button(
+            Card(
                 onClick = {},
                 modifier = Modifier
                     .weight(1f)
                     .height(50.dp),
                 shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4F6F9)),
-                elevation = ButtonDefaults.buttonElevation(0.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Blue.copy(alpha = 0.1f)),
+                elevation = CardDefaults.cardElevation(0.dp),
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center,
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center,
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(24.dp)
-                            .background(Color(0xFF1877F2), CircleShape),
-                        contentAlignment = Alignment.Center,
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
                     ) {
-                        Text("f", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Box(
+                            modifier = Modifier
+                                .size(24.dp)
+                                .background(Color(0xFF1877F2), CircleShape),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(
+                                text = "f",
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 14.sp,
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Facebook",
+                            color = Color(0xFF4A5568),
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 14.sp,
+                        )
                     }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = "Facebook",
-                        color = Color(0xFF4A5568),
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 14.sp,
-                    )
                 }
             }
 
-            // Google Button
-            Button(
+            Card(
                 onClick = {},
                 modifier = Modifier
                     .weight(1f)
                     .height(50.dp),
                 shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFF4F6F9)),
-                elevation = ButtonDefaults.buttonElevation(0.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Blue.copy(alpha = 0.1f)),
+                elevation = CardDefaults.cardElevation(0.dp),
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center,
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center,
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(24.dp)
-                            .background(Color.White, CircleShape),
-                        contentAlignment = Alignment.Center,
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center,
                     ) {
-                        Text("G", color = Color(0xFFEA4335), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Box(
+                            modifier = Modifier
+                                .size(24.dp)
+                                .background(Color.White, CircleShape),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(
+                                text = "G",
+                                color = Color(0xFFEA4335),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 14.sp,
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Google",
+                            color = Color(0xFF4A5568),
+                            fontWeight = FontWeight.Medium,
+                            fontSize = 14.sp,
+                        )
                     }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = "Google",
-                        color = Color(0xFF4A5568),
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 14.sp,
-                    )
                 }
             }
         }
